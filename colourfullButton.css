@@ -2,3 +2,45 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --main-color: #1E1F25;
+    --btn-bg: #000;
+    --btn-color: #CBCBCB;
+    --btn-color-hover: #FFFFFF;
+    --grad-color-1: #EEAF61;
+    --grad-color-2: #FB9062;
+    --grad-color-3: #EE5D6C;
+    --grad-color-4: #CE4993;
+    --grad-color-5: #6A0D83;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.button-border {
+    background: linear-gradient(115deg, var(--grad-color-1), var(--grad-color-2), var(--grad-color-3), var(--grad-color-4), var(--grad-color-5));  
+    padding: 2px;
+}
+
+.button {
+    border: none;
+    background: var(--btn-bg);
+    color: var(--btn-color);
+    padding: 1em 1.5em;
+    letter-spacing: 0.5em;
+    cursor: pointer;
+}
+
+.button-border:hover {
+    background: linear-gradient(115deg, var(--grad-color-5), var(--grad-color-4), var(--grad-color-3), var(--grad-color-2), var(--grad-color-1));
+}
+
+.button-border:hover .button {
+    color: var(--btn-color-hover);
+    padding: 1.1em 1.6em;
+}
