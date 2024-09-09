@@ -8,7 +8,7 @@ html, body {
     --toggle-border: #000;
     --toggle-bg: #fff;
     --circle-size: 40px;
-    --toggle-width: 200px;
+    --toggle-width: 100px;
 }
 
 .toggle-wrap {
