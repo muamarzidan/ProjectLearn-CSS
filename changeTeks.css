@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-word: #C91B9D;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1:after {
+    content: "";
+    animation: 2s change infinite;
+}
+
+@keyframes change {
+    0% {
+        content: " U";
+        color: var(--bg-word);
+    }
+    25% {
+        content: " SO";
+        color: var(--bg-word);
+    }
+    50% {
+        content: " MUCH";
+        color: var(--bg-word);
+    }
+    75% {
+        content: " FOR";
+        color: var(--bg-word);
+    }
+    100% {
+        content: " EVER";
+        color: var(--bg-word);
+    }
+}
