@@ -29,29 +29,37 @@ html, body {
     height: 40px;
     background-color: var(--progress-bar-bg);
     border-radius: 20px;
+    overflow: hidden;
 }
 
 .prog-status {
     height: 40px;
     border-radius: 20px;
-}
-
-.stage-1 {
-    width: var(--stage-1);
-    background-color: var(--stage-1-bg);
-}
-
-.stage-2 {
-    width: var(--stage-2);
-    background-color: var(--stage-2-bg);
-}
-
-.stage-3 {
-    width: var(--stage-3);
-    background-color: var(--stage-3-bg);
-}
-
-.stage-4 {
-    width: var(--stage-4);
+    width: 0;
     background-color: var(--stage-4-bg);
+    animation: progress-animation 5s ease-in-out forwards;
+}
+
+/* Definisikan animasi untuk membuat progress bar bergerak */
+@keyframes progress-animation {
+    0% {
+        width: 0%;
+        background-color: var(--stage-1-bg);
+    }
+    25% {
+        width: var(--stage-1);
+        background-color: var(--stage-1-bg);
+    }
+    50% {
+        width: var(--stage-2);
+        background-color: var(--stage-2-bg);
+    }
+    75% {
+        width: var(--stage-3);
+        background-color: var(--stage-3-bg);
+    }
+    100% {
+        width: var(--stage-4);
+        background-color: var(--stage-4-bg);
+    }
 }
